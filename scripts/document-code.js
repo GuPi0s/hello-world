@@ -1,3 +1,7 @@
+var numLine = document.getElementById("txt_numLine");
+var start = document.getElementById("buttom_start");
+start.addEventListener("click", drawByClick )
+
 var ruta = window.location;
 var win = window;
 var doc = document;
