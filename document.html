@@ -3,18 +3,36 @@
   <head>
     <meta charset="utf-8">
     <title>Document object model</title>
-    <link href="styles/style.css" rel="stylesheet">
+    <link href="styles/document-style.css" rel="stylesheet">
   <head>
   <body>
-    <h1>Let's play: document y window.</h1>
+    <h1>¡Vamos a dibujar con Canvas!</h1>
+    <p>¿Te gusta dibujar? Con esta sencilla utilidad web, puedes diseñar tus propios dibujos
+      simples utilizando un espacio especial creado por la etiqueta Canvas en HTML.</p>
     <p>
-      ¿Cuantas líneas quieres?<br />
-      <input type="text" id="txt_numInput"/>
+      <label for="numLine">¿Cuantas líneas quieres?</label>
+      <input type="number" name="line_number" id="numIn" min="1" max="500"><br />
+      *Este valor puede oscilar entre 1 y 500.
+    </p>
+    <p>
+      <label for="color">¿Que color quieres en tu dibujo?</label>
+      <input type="color" name="color" id="color">
+    </p>
+    <p>
+      Por favor, define el ancho y la antura del espacio de Canvas:<br />
+      <label for="width">Ancho:</label>
+      <input type="number" name="canvas_width" id="width" min="100" max="1000" step="10">
+      <label for="height">Alto:</label>
+      <input type="number" name="canvas_height" id="height" min="100" max="1000" step="10"><br />
+      *Ambos valores pueden oscilar entre 100 y 1000.
+    </p>
+      ¿Todo listo?
       <input type="button" value="¡A darle!" id="buttom_start"/>
     </p>
-    <canvas id="draw1" width="300" height="300"></canvas><br>
-    <script type="text/javascript" src="canvas/draw1.js"></script>
+    <canvas id="canvas" width="300" height="300"></canvas><br>
+    <script type="text/javascript" src="canvas/document-draw.js"></script>
     <script type="text/javascript" src="scripts/document-code.js"></script>
+    <input type="reset" id="reset">
     <p>Este sitio web simple ha sido diseñado como parte de las actividades sugeridas en el
       curso de programación básica de <a href="www.platzi.com" title="Platzi"><strong>Platzi
       </a></strong>, que te introduce a los fundamentos de la programación de forma amena
